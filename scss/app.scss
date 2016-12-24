@@ -25,7 +25,7 @@ body{
 
 
 
-      #plusbtn{
+      #plusBtn{
         background-color: white;
         flex: 1 0 10px;
         text-align: center;
@@ -50,7 +50,7 @@ body{
       }
 
 
-      #myBoard{
+      #myBoards{
         flex: 1 1 40px;
         background-color: rgb(70, 66, 63);
         border-right: 2px solid white;
@@ -65,7 +65,7 @@ body{
         text-align: center;
         margin: auto;
         padding: 8px;
-        font-family: "oswald", sans-serif;
+        font-family: oswald, sans-serif;
         font-size: 17px;
       }
     }
@@ -81,18 +81,18 @@ body{
   }
 
     .oswald{
-      font-family: "oswald", sans-serif;
+      font-family: oswald, sans-serif;
       font-size: 20px;
     }
 
     .metaData{
-      font-family: "oswald", sans-serif;
+      font-family: oswald, sans-serif;
       padding: 5px;
       color: grey;
     }
 
     .postContent{
-      font-family: "oswald", sans-serif;
+      font-family: oswald, sans-serif;
       padding: 10px;
     }
 }
