@@ -1,2 +1,65 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
-  background-color: blue; }
+  background-image: url("/assets/bg.jpg"); }
+
+#topContainer {
+  height: 100px; }
+  #topContainer #header {
+    background-color: white;
+    height: 60px;
+    display: flex;
+    flex-flow: row wrap; }
+    #topContainer #header img {
+      background-color: white;
+      padding-right: 250px; }
+    #topContainer #header #plusbtn {
+      background-color: white;
+      flex: 1 0 10px;
+      text-align: center;
+      font-size: 35px;
+      border: 1px solid orange;
+      padding: 4px; }
+  #topContainer nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 40px; }
+    #topContainer nav #random {
+      flex: 1 1 40px;
+      background-color: #46423f;
+      border-right: 2px solid white; }
+    #topContainer nav #myBoard {
+      flex: 1 1 40px;
+      background-color: #46423f;
+      border-right: 2px solid white; }
+    #topContainer nav #getApp {
+      flex: 1 1 40px;
+      background-color: #46423f; }
+    #topContainer nav h2 {
+      text-align: center;
+      margin: auto;
+      padding: 8px;
+      font-family: "oswald", sans-serif;
+      font-size: 17px; }
+
+#content .postContainer {
+  background-color: white;
+  height: 460px;
+  margin: 15px; }
+
+#content .oswald {
+  font-family: "oswald", sans-serif;
+  font-size: 20px; }
+
+#content .metaData {
+  font-family: "oswald", sans-serif;
+  padding: 5px;
+  color: grey; }
+
+#content .postContent {
+  font-family: "oswald", sans-serif;
+  padding: 10px; }
