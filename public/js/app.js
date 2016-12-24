@@ -65,5 +65,38 @@ var postContainer = document.createElement('div');
 postContainer.className = 'postContainer';
 content.appendChild(postContainer);
 
+// create post div
+var post = document.createElement('div');
+post.className = 'post';
+postContainer.appendChild(post);
+
+// create post <img> for blog
+var postImage = document.createElement('img');
+postImage.src = 's';
+post.appendChild(postImage);
+
+// create postTitle div
+var postTitle = document.createElement('div');
+postTitle.className = 'postTitle';
+postTitle.innerHTML = 'Funny & Cute Animals Compilation 2014 New';
+post.appendChild(postTitle);
+
+// create metaData div
+var metaData = document.createElement('div');
+metaData.className = 'metaData';
+metaData.innerHTML = 'lskdjfsldkjfslksldkfjslkd';
+post.appendChild(metaData);
+
+// create postContent div
+var postContent = document.createElement('div');
+postContent.className = 'postContent';
+postContent.innerHTML = 'test';
+post.appendChild(postContent);
+
+
+
+
+
+
 
 
