@@ -85,9 +85,8 @@ body{
         justify-content: center;
 
         img{
-          margin-top: 5%;
-          margin-bottom: 2%;
-          width: 40%;
+          margin-bottom: 3%;
+          width: 50%;
           height: 30%;
         }
     }
@@ -98,12 +97,24 @@ body{
       text-align: center;
     }
 
+    .vote{
+      font-family: oswald, sans-serif;
+      font-size: 15px;
+      text-align: center;
+    }
+
       .metaData{
         text-align: center;
         font-family: oswald, sans-serif;
         padding: 5px;
         color: grey;
       }
+
+    .dateLoaded{
+      font-family: oswald, sans-serif;
+      font-size: 13px;
+      text-align: center;
+    }
 
       .postContent{
         font-family: oswald, sans-serif;

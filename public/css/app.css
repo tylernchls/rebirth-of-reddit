@@ -57,19 +57,26 @@ body {
       flex-flow: row wrap;
       justify-content: center; }
       #content .postContainer .imgContainer img {
-        margin-top: 5%;
-        margin-bottom: 2%;
-        width: 40%;
+        margin-bottom: 3%;
+        width: 50%;
         height: 30%; }
     #content .postContainer .postTitle {
       font-family: oswald, sans-serif;
       font-size: 20px;
+      text-align: center; }
+    #content .postContainer .vote {
+      font-family: oswald, sans-serif;
+      font-size: 15px;
       text-align: center; }
     #content .postContainer .metaData {
       text-align: center;
       font-family: oswald, sans-serif;
       padding: 5px;
       color: grey; }
+    #content .postContainer .dateLoaded {
+      font-family: oswald, sans-serif;
+      font-size: 13px;
+      text-align: center; }
     #content .postContainer .postContent {
       font-family: oswald, sans-serif;
       padding: 10px; }

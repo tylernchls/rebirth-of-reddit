@@ -75,12 +75,14 @@ var content =  document.getElementById('content');
     let imageObj = JSON.parse(this.responseText);
     console.log(this.responseText);
 
+    // will loop through content of json object, pull info and build posts
     for(var i = 0; i < imageObj.data.children.length; i++) {
       if(imageObj.data.children[i].data.post_hint === 'image') { // will only grab post if it has an image
 
         var url = imageObj.data.children[i].data.url;
         var title = imageObj.data.children[i].data.title;
         var author = imageObj.data.children[i].data.author;
+        var score = imageObj.data.children[i].data.score;
         var date = imageObj.data.children[i].data.created;
         var newDate = new Date(date * 1000);
 
@@ -130,11 +132,25 @@ var content =  document.getElementById('content');
         postTitle.innerHTML = title;
         post.appendChild(postTitle);
 
+          // create imgVote div
+        var imgVote = document.createElement('div');
+        imgVote.className = 'vote';
+        imgVote.innerHTML = 'Votes: ' + score;
+        post.appendChild(imgVote);
+
           // create metaData div
         var metaData = document.createElement('div');
         metaData.className = 'metaData';
-        metaData.innerHTML = 'by ' + author + '*' + newDate;
+        metaData.innerHTML = 'by: ' + author;
         post.appendChild(metaData);
+
+          // create dateUploaded div
+        var dateUploaded = document.createElement('div');
+        dateUploaded.className = 'dateLoaded';
+        dateUploaded.innerHTML = 'Uploaded : ' + newDate;
+        post.appendChild(dateUploaded);
+
+
       }
 
     }
