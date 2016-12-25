@@ -1,4 +1,5 @@
  // building out topContainer
+
 var topContainer = document.getElementById('topContainer');
 
  // create header div
@@ -75,6 +76,8 @@ var content =  document.getElementById('content');
     console.log(this.responseText);
 
     for(var i = 0; i < imageObj.data.children.length; i++) {
+      if(imageObj.data.children[i].data.post_hint === 'image') { // will only grab post if it has an image
+
         var url = imageObj.data.children[i].data.url;
         var title = imageObj.data.children[i].data.title;
         var author = imageObj.data.children[i].data.author;
@@ -132,10 +135,12 @@ var content =  document.getElementById('content');
         metaData.className = 'metaData';
         metaData.innerHTML = 'by ' + author + '*' + newDate;
         post.appendChild(metaData);
+      }
 
     }
-
   }
+
+
 
 
 
