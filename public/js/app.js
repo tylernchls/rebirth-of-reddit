@@ -53,6 +53,9 @@ var getApp_h2 = document.createElement('h2');
 getApp_h2.innerHTML = 'GET THE APP';
 getApp.appendChild(getApp_h2);
 
+
+
+
 //---------------end topContainer--------------
 
 
@@ -60,38 +63,92 @@ getApp.appendChild(getApp_h2);
 
 var content =  document.getElementById('content');
 
-// create postContainer div appended to content div
-var postContainer = document.createElement('div');
-postContainer.className = 'postContainer';
-content.appendChild(postContainer);
 
-// create post div
-var post = document.createElement('div');
-post.className = 'post';
-postContainer.appendChild(post);
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener("load", objListener);
+  oReq.open("GET", "https://www.reddit.com/r/pics.json");
+  oReq.send();
 
-// create post <img> for blog
-var postImage = document.createElement('img');
-postImage.src = 's';
-post.appendChild(postImage);
 
-// create postTitle div
-var postTitle = document.createElement('div');
-postTitle.className = 'postTitle';
-postTitle.innerHTML = 'Funny & Cute Animals Compilation 2014 New';
-post.appendChild(postTitle);
+  function objListener() {
+    let imageObj = JSON.parse(this.responseText);
+    console.log(this.responseText);
 
-// create metaData div
-var metaData = document.createElement('div');
-metaData.className = 'metaData';
-metaData.innerHTML = 'lskdjfsldkjfslksldkfjslkd';
-post.appendChild(metaData);
+    for(var i = 0; i < imageObj.data.children.length; i++) {
+        var url = imageObj.data.children[i].data.url;
+        var title = imageObj.data.children[i].data.title;
+        var author = imageObj.data.children[i].data.author;
+        var date = imageObj.data.children[i].data.created;
+        var newDate = new Date(date * 1000);
 
-// create postContent div
-var postContent = document.createElement('div');
-postContent.className = 'postContent';
-postContent.innerHTML = 'test';
-post.appendChild(postContent);
+
+          // create postContainer div appended to content div
+        var postContainer = document.createElement('div');
+        postContainer.className = 'postContainer';
+        content.appendChild(postContainer);
+
+          // create post div
+        var post = document.createElement('div');
+        post.className = 'post';
+        postContainer.appendChild(post);
+
+          // create postContent div
+        var postContent = document.createElement('div');
+        postContent.className = 'postContent';
+        postContent.innerHTML = '';
+        post.appendChild(postContent);
+
+
+          // create img container
+        var imgContainer = document.createElement('div');
+        imgContainer.className = 'imgContainer';
+        post.appendChild(imgContainer);
+
+
+          // create post <img> for blog
+        var postImage = document.createElement('img');
+        postImage.src = url;
+        imgContainer.appendChild(postImage);
+
+
+          // check to see if img has .gigv ending
+        var isGif = /gifv/.test(url);
+        console.log(imageObj);
+
+        if(isGif) {
+          var url = url.replace(/gifv/i, 'gif');
+        }
+        console.log(url);
+
+
+          // create postTitle div
+        var postTitle = document.createElement('div');
+        postTitle.className = 'postTitle';
+        postTitle.innerHTML = title;
+        post.appendChild(postTitle);
+
+          // create metaData div
+        var metaData = document.createElement('div');
+        metaData.className = 'metaData';
+        metaData.innerHTML = 'by ' + author + '*' + newDate;
+        post.appendChild(metaData);
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
