@@ -1,3 +1,6 @@
+
+
+
 html, body{
   margin: 0;
   padding: 0;
@@ -31,9 +34,9 @@ body{
         border: 1px solid orange;
         padding: 4px;
 
-
       }
     }
+
 
     nav{
       display: flex;
@@ -71,59 +74,75 @@ body{
   }
 
 #content{
+
   display: flex;
   flex-flow: row wrap;
 
+
   .postContainer{
+    flex: 1 1 300px;
     background-color: white;
     height: 100%;
     margin: 15px;
 
-    .imgContainer{
+    .post{
+
+
+      .imgContainer{
         display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        flex-flow: no wrap;
 
-        img{
-          margin-bottom: 3%;
-          width: 50%;
-          height: 30%;
-        }
-    }
+          img{
+            flex: 1;
+            margin-bottom: 1%;
+            width: 80%;
+            height: 0%;
+            padding: 3%;
+          }
+      }
 
-    .postTitle{
-      font-family: oswald, sans-serif;
-      font-size: 20px;
-      text-align: center;
-    }
 
-    .vote{
-      font-family: oswald, sans-serif;
-      font-size: 15px;
-      text-align: center;
-    }
+      .postTitle{
+        font-family: oswald, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        padding: 4%;
+      }
+
+      .vote{
+
+        font-family: oswald, sans-serif;
+        font-size: 15px;
+        text-align: center;
+      }
 
       .metaData{
         text-align: center;
         font-family: oswald, sans-serif;
         padding: 5px;
         color: grey;
+        padding: 4%;
       }
 
-    .dateLoaded{
-      font-family: oswald, sans-serif;
-      font-size: 13px;
-      text-align: center;
-    }
+      .dateLoaded{
+        font-family: oswald, sans-serif;
+        font-size: 13px;
+        text-align: center;
+        padding: 2px;
+      }
 
       .postContent{
         font-family: oswald, sans-serif;
         padding: 10px;
       }
 
+    }
   }
-
 }
+
+
+
+
 
 
 

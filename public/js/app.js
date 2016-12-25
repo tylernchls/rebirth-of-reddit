@@ -67,7 +67,7 @@ var content =  document.getElementById('content');
 
   var oReq = new XMLHttpRequest();
   oReq.addEventListener("load", objListener);
-  oReq.open("GET", "https://www.reddit.com/r/pics.json");
+  oReq.open("GET", "https://www.reddit.com/r/IASIP.json");
   oReq.send();
 
 
